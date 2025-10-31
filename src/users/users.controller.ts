@@ -22,8 +22,8 @@ return userName
 }
 
 
-@Patch()
-update():string{
+@Patch(':userName')
+update(@Param('userName')userName:"string") :string{
 return "user updated"
 }
 
