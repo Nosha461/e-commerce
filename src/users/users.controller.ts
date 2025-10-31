@@ -11,9 +11,9 @@ return req
 }
 
 
-@Get()
-findall():string[]{
-return ["menna" ,"ahmed"]
+@Get(':userName')
+findall(@Param('userName') userName:string):string{
+return userName
 }
 
 @Get(':userName')
